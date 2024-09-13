@@ -1,0 +1,504 @@
+/* Login.css */
+login-page-content {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+.login-main {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  position: relative; /* Ensure the pseudo-element is positioned relative to this container */
+  padding: 20px;
+}
+
+.login-main::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: url("/public/assets/supplies.png");
+  background-size: cover; 
+  background-position: center; 
+  opacity: 0.4; 
+  z-index: -1; 
+}
+
+
+.logo-container {
+  position: relative; 
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 15px;
+  margin-left: 62px;
+}
+
+.logo {
+  max-width: 100%; 
+}
+
+.branch {
+  position: absolute;
+  top: 67%;
+  left: 17%;
+  display: flex;
+  align-items: center;
+  margin-top: 10px;
+  font-size: 12px;
+}
+
+.branch p {
+  margin: 0;
+  padding: 0;
+}
+
+.dot {
+  margin: 0 10px; /* Space between dots and branch names */
+  font-size: 20px; /* Size of the dots */
+}
+
+.portal-container {
+  position: relative;
+  margin-top: -131px;
+  margin-bottom: 147px;
+  margin-left: -52px;
+}
+
+.portal-btn {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 100%; 
+  padding: 15px 0;
+  font-size: 1rem;
+  text-decoration: none;
+  border: none;
+  color: white;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  text-align: center;
+}
+
+.portal-btn p {
+  margin-top: 10px; 
+  font-size: 0.8rem; 
+  color: white;
+}
+
+/* Teacher Portal button styling */
+.teacher-btn {
+  background-color: #5cb85c; /* Green */
+}
+
+.teacher-btn:hover {
+  background-color: #4cae4c; /* Darker green */
+}
+
+/* Student Portal button styling */
+.student-btn {
+  background-color: #337ab7; 
+}
+
+.student-btn:hover {
+  background-color: #286090; 
+}
+
+/* Parent/Guardian Portal button styling */
+.parent-btn {
+  background-color: #f0ad4e;
+}
+
+.parent-btn:hover {
+  background-color: #ec971f; 
+}
+
+.portal {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 2px;
+  margin-bottom: 5px;
+  width: 130%;
+}
+
+.login-footer {
+  background-color: #f8f8f8;
+  padding: 20px;
+  text-align: center;
+}
+
+.portal-btn {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  padding: 15px 0;
+  font-size: 1.4rem;
+ 
+  border: none;
+  color: white;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  text-align: center;
+}
+
+.portal-btn p {
+  margin-top: 10px; 
+  font-size: 0.8rem; 
+  color: white;
+}
+
+
+/*Student Login*/
+
+.student-login-page {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0;
+  background: linear-gradient(135deg, #1a032b, #340068); /* Deep purple background */
+  overflow: hidden;
+  height: 100vh;
+}
+
+.login-container {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  border-radius: 20px; /* Fixed border-radius */
+  width: 80%;
+  background: rgba(255, 255, 255, 0.1); /* Slightly more transparent */
+  overflow: hidden;
+  box-shadow: 0 9px 17px rgba(0, 0, 0, 0.3); /* Stronger shadow */
+  z-index: 0;
+}
+
+.character-container {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-image: url('/public/assets/bg.png');
+  background-size: cover; /* Adjusted to contain */
+  background-position: center;
+  border-radius: 20px 0 0 20px;
+  position: relative;
+}
+
+.student-character {
+  width: 200px; /* Slightly larger for better scaling */
+  height: auto;
+  transition: all 0.3s ease-in-out;
+}
+
+.welcome {
+  text-align: center;
+  position: absolute;
+  bottom: 130%;
+  left: 5%;
+  z-index: 10; /* Ensure it's above other elements */
+}
+
+.welcome h1 {
+  font-size: 3rem;
+  color: #fff; /* White color for better contrast */
+  font-family: 'Poppins', sans-serif; /* More modern font */
+  background: linear-gradient(45deg, #ffffff, #f0f0f0);
+  background-clip: text;
+  color: transparent;
+  text-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+  animation: fadeInUp 1s ease-out;
+}
+
+.form-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+  height: 100%;
+  text-align: center;
+}
+
+.login-form {
+  width: 100%;
+  max-width: 450px;
+  padding: 30px;
+  background: rgba(255, 255, 255, 0.2); /* More transparent */
+  backdrop-filter: blur(15px); /* Increased blur */
+  border-radius: 20px; /* Match the container */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Subtle shadow */
+}
+
+.login-form h1 {
+  font-family: 'Poppins', sans-serif;
+  color: #ff6f61;
+  margin-bottom: 20px;
+}
+
+.login-form input {
+  width: 100%; /* Full width */
+  margin: 10px 0;
+  padding: 15px;
+  border: 2px solid #ccc;
+  border-radius: 10px; /* Adjusted border-radius */
+  font-size: 16px;
+}
+
+.login-form button {
+  width: 100%; /* Full width */
+  padding: 15px;
+  background-color: #ff6f61;
+  color: white;
+  border: none;
+  border-radius: 10px;
+  font-size: 18px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.forgot-password {
+  text-decoration: none;
+  color: #ffffff;
+  font-size: 14px;
+  display: block; /* Adjusted to block for better layout */
+  margin: 10px 0;
+}
+
+.keep-logged-in {
+  display: flex;
+  align-items: center; /* Vertically center checkbox and label */
+  margin-bottom: 15px;
+}
+
+.keep-logged-in input[type="checkbox"] {
+  margin-right: 8px; /* Space between checkbox and label text */
+}
+
+.keep-logged-in label {
+  font-size: 14px; /* Adjust font size if needed */
+}
+
+.separator {
+  display: flex;
+  align-items: center;
+  text-align: center;
+  margin: 20px 0;
+}
+
+.separator::before,
+.separator::after {
+  content: '';
+  flex: 1;
+  border-bottom: 1px solid #000; /* Straight line */
+  margin: 7px;
+}
+
+.separator span {
+  font-size: 14px;
+  font-weight: bold;
+}
+
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+  .student-login-page {
+    flex-direction: column;
+    justify-content: flex-start;
+    padding-top: 50px;
+  }
+
+  .login-container {
+    flex-direction: column;
+    width: 100%;
+    padding: 20px;
+  }
+
+  .character-container {
+    margin-bottom: 20px;
+    border-radius: 20px; /* Consistent border-radius */
+  }
+
+  .login-form {
+    width: 100%;
+  }
+}
+
+
+#canvas {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+}
+
+.fire-wrapper {
+  left: 50%;
+  position: absolute;
+  top: 50%;
+  transform-origin: top center;
+  transform: translate(-50%, 0) rotate3d(1, 0, 0, 60deg);
+  width: 3.5rem;
+}
+
+.fire {
+  animation: whoosh 1s linear infinite both;
+  width: 100%;
+  
+}
+
+@keyframes whoosh {
+  from {
+    transform: translateY(-25%);
+  }
+  to {
+    transform: translateY(0);
+  }
+}
+
+.rain {
+  position: absolute;
+  width: 1rem;
+  height: 10rem;
+  background: #ffffff;
+  border-radius: 20%;
+  opacity: 0.2;
+  z-index: -1;
+}
+
+.drop {
+  width: 1rem;
+  height: 7rem;
+  background: #ffffff;
+  position: absolute;
+  border-radius: 20%;
+  opacity: 0.2;
+}
+
+.rain1 {
+  left: 5rem;
+  top: 2rem;
+  animation: raining 2s linear infinite both;
+}
+
+.rain2 {
+  left: 15rem;
+  top: 10rem;
+  animation: raining 3s linear infinite both;
+}
+
+.drop2 {
+  top: 12rem;
+  animation: raining 4s linear infinite both -2s;
+}
+
+.rain3 {
+  left: 5rem;
+  top: 35rem;
+  animation: raining 3s linear infinite both;
+}
+
+.rain4 {
+  right: 23rem;
+  top: 6rem;
+  animation: raining 4s linear infinite both;
+}
+
+.rain5 {
+  left: 25rem;
+  top: 47rem;
+  animation: raining 3s linear infinite both -3s;
+}
+
+.drop5 {
+  top: -6rem;
+  animation: raining 2s linear infinite both;
+}
+
+.rain6 {
+  right: 10rem;
+  top: 34rem;
+  animation: raining 3s linear infinite both;
+}
+
+.rain7 {
+  left: 34rem;
+  top: 10rem;
+  animation: raining 2s linear infinite both -5s;
+}
+
+.rain8 {
+  right: 25rem;
+  top: 40rem;
+  animation: raining 3s linear infinite both;
+}
+
+.drop8 {
+  top: -7rem;
+  animation: raining 4s linear infinite both -6s;
+}
+
+.rain9 {
+  right: 5rem;
+  top: 15.5rem;
+  animation: raining 3s linear infinite both;
+}
+
+.rain10 {
+  left: 24rem;
+  top: -4rem;
+  animation: raining 2s linear infinite both -3s;
+}
+
+.drop11 {
+  right: 17rem;
+  top: 20rem;
+  animation: raining 3s linear infinite both;
+}
+
+.drop12 {
+  right: 15rem;
+  top: 50rem;
+  animation: raining 4s linear infinite both -1s;
+}
+
+@keyframes raining {
+  from {
+    transform: translateY(-1200px);
+  }
+  to {
+    transform: translateY(869px);
+  }
+}
+
+
+@media (max-width: 768px) {
+  .student-login-page {
+    flex-direction: column;
+    justify-content: flex-start;
+    padding-top: 50px;
+  }
+
+  .login-container {
+    flex-direction: column;
+    padding: 20px;
+  }
+
+  .character-container {
+    margin-bottom: 20px;
+    border-radius: 20px;
+  }
+
+  .login-form {
+    width: 100%;
+  }
+}
